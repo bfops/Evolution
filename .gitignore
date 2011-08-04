@@ -1,0 +1,13 @@
+*.sw*
+*~
+*.[oa]
+*.cbp
+*.depend
+*.layout
+*.cbTemp
+
+bin/
+docs/
+obj/
+Debug/
+Release/
