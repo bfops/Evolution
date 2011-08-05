@@ -1,8 +1,10 @@
 import std.file;
+import std.stream;
 
-import ecosystem;
+import genome_parser;
 
 void main()
 {
-    assert(parseTextGenome(cast(char[])read("starting-genome.txt")) != null);
+    auto file = new BufferedFile("starting-genome.txt");
+    assert(parseTextGenome(file) != null);
 }
