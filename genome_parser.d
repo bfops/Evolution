@@ -44,7 +44,7 @@ private
             }
 
             if(c >= '0' && c <= '9')
-                ret = (10 * ret) + (c - '0');
+                ret = cast(Base)((10 * ret) + (c - '0'));
         }
 
         if(negate)
@@ -104,7 +104,7 @@ Genome parseTextGenome(alias output = writeln, StreamType : InputStream)(StreamT
                     return null;
                 }
 
-                ret ~= val + keywordLookup.keys.length;
+                ret ~= cast(Base)(val + keywordLookup.keys.length);
             }
             else if(keyword in keywordLookup)
             {
