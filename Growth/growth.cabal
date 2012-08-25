@@ -1,0 +1,41 @@
+Name:                Growth
+Version:             0.1
+Description:         Play with culture growth and spread mechanics
+Category:            Games
+License-file:        LICENSE
+Author:              Ben Foppa
+Maintainer:          benjamin.foppa@gmail.com
+Build-Type:          Simple
+Cabal-Version:       >= 1.9.2
+
+Executable Growth
+    hs-source-dirs: src/
+    Main-is:        Main.hs
+    GHC-Options:    -Wall -threaded -rtsopts=all -fllvm
+    Extensions:     TupleSections, GeneralizedNewtypeDeriving, FlexibleInstances
+
+    Build-Depends: 
+                    OpenGL,
+                    GLFW,
+                    stm,
+                    array,
+                    tuple,
+                    QuickCheck >= 2,
+                    base
+
+test-suite Tests
+    type:           exitcode-stdio-1.0
+    hs-source-dirs: test/
+                    src/
+    main-is:        Test.hs
+    extensions:     TupleSections, GeneralizedNewtypeDeriving, TemplateHaskell
+
+    build-depends: 
+                    QuickCheck >= 2,
+                    HUnit,
+                    test-framework-quickcheck2,
+                    test-framework-hunit,
+                    test-framework-th,
+                    test-framework,
+                    Cabal,
+                    base

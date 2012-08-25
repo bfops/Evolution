@@ -1,13 +1,7 @@
-*.sw*
+*.sw[a-z]
 *~
-*.[oa]
-*.cbp
-*.depend
-*.layout
-*.cbTemp
+*.ignore
+*.ignore.*
 
-bin/
-docs/
-obj/
-Debug/
-Release/
+dist
+docs
